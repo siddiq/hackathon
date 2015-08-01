@@ -6,3 +6,4 @@ platforms/
 plugins/
 www/lib/**/*
 .idea/
+.io-config.json		# its auto gen
