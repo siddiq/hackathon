@@ -1,5 +1,9 @@
 <ion-content>
-    <a class="button icon ion-backspace-outline" href='#/'></a>
+    <ion-header-bar class="bar-stable">
+        <a class="button icon ion-backspace-outline" href='#/'></a>
+        <h1 class="title">One.com gallery</h1>
+    </ion-header-bar>
+
     <label class="item item-input item-floating-label">
         <span class="input-label">Searching for:</span>
         <input type="text" placeholder="Searching for:" ng-model="vm.keyword" ng-model-options="{ debounce: 1000 }">
