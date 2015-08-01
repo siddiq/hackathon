@@ -60,13 +60,16 @@ ProductsController.prototype.display = function (items) {
     };
 
 ProductsController.prototype.search = function (q) {
-    this.$ionicLoading.show({
+    /*this.$ionicLoading.show({
         template: 'Loading from Souq.ae'
-    });
+    });*/
+    this.loading = true;
     this.items.search({q: q}, function (data) {
             this.display(data.data.products);
-            this.$ionicLoading.hide();
+            //this.$ionicLoading.hide();
+            this.loading = false;
         }.bind(this));
+
     };
 
 angular.module('products', ['ngResource'])
