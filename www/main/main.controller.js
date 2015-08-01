@@ -1,14 +1,15 @@
 /*global ionic, angular, Camera, ProductsController, FileUploadOptions, FileTransfer */
 
-var debug = true;
+var debug = false;
 
-function MainController ($scope, $http, $timeout, $location) {
+function MainController ($scope, $http, $timeout, $location, $ionicLoading) {
     this.$scope = $scope;
     $scope.vm = this;
 
     this.$http = $http;
     this.$timeout = $timeout;
     this.$location = $location;
+    this.$ionicLoading = $ionicLoading;
 
     this.result = {"name":"asdkasdkahsdkahsjdkas"};
 
@@ -66,6 +67,11 @@ angular.extend(MainController.prototype, {
 
                 // Display the picture.
                 document.getElementById('myimage').style.backgroundImage = 'url("' + src +  '")';
+                
+                // Loading icon
+                that.$ionicLoading.show({
+                    template: 'Recognition is in process...'
+                });
 
                 // Upload the picture.
                 uploadPhoto(src, function (r) {
@@ -75,6 +81,7 @@ angular.extend(MainController.prototype, {
 
                     // Use api to recognize image.
                     that.cloudSightClient({url: url, success: function (data) {
+                        that.$ionicLoading.hide();
                         console.log(data);
                         document.getElementById('results').innerHTML = data.name;
                         that.$location.path('products');
@@ -144,7 +151,6 @@ angular.extend(MainController.prototype, {
         cfg.scope = cfg.scope || this;
         cfg.success = cfg.success || function() {};
         cfg.error = cfg.error || function() {};
-        document.getElementById('loading').style.display = 'block';
 
         var BASE_URL = 'https://api.cloudsightapi.com',
             apikey = 'bZBDqGjCmsIg1Q7TUDDToA',
@@ -220,4 +226,4 @@ angular.extend(MainController.prototype, {
 ProductsController.$inject = ['$scope'];
 
 angular.module('main', ['ngResource'])
-    .controller('controllers.main', ['$scope', '$http', '$timeout', '$location', MainController]);
+    .controller('controllers.main', ['$scope', '$http', '$timeout', '$location', '$ionicLoading', MainController]);
