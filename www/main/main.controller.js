@@ -75,6 +75,7 @@ angular.extend(MainController.prototype, {
                     // Use api to recognize image.
                     that.cloudSightClient({url: url, success: function (data) {
                         console.log(data);
+                        document.getElementById('results').innerHTML = data.name;
                     }, error: function (err) {
                         //
                     }});
