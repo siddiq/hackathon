@@ -1,9 +1,9 @@
-function ProductsController ($scope, $resource) {
+function ProductsController ($scope, $resource, $rootScope, $timeout) {
     this.$scope = $scope;
     $scope.vm = this;
     this.$resource = $resource;
-
-    this.keyword = 'Iphone';
+    this.$rootScope = $rootScope;
+    $rootScope.keyword = $rootScope.keyword || '';
 
     var local = 'http://localhost:5000/api/products';
     var remoteSouq = 'https://api.souq.com/v1/products';
@@ -28,13 +28,28 @@ function ProductsController ($scope, $resource) {
         }
     });
 
-    this.search(this.keyword);
+    //this.search(this.keyword);
 
     $scope.$watch(function () {
-        return this.keyword;
+        return $rootScope.keyword;
     }.bind(this), function (newVal, oldVal) {
-        if (newVal === oldVal) return;
+        this.keyword = newVal;
         this.search(newVal);
+    }.bind(this));
+
+    $scope.$watch(function () {
+        return this.keyword
+    }.bind(this), function (newVal, oldVal) {
+            if (newVal === oldVal || newVal === $rootScope.keyword) return;
+            $rootScope.keyword = newVal;
+        }.bind(this)
+    );
+
+    $rootScope.$on('keyword1', function (e, word) {
+        $rootScope.keyword = word;
+        $timeout(function () {
+            $scope.$digest();
+        });
     }.bind(this));
 }
 
@@ -49,4 +64,4 @@ ProductsController.prototype.search = function (q) {
     };
 
 angular.module('products', ['ngResource'])
-    .controller('controllers.products', ['$scope', '$resource', ProductsController]);
+    .controller('controllers.products', ['$scope', '$resource', '$rootScope', '$timeout', ProductsController]);

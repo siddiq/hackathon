@@ -2,12 +2,13 @@
 
 var debug = true;
 
-function MainController ($scope, $http, $timeout) {
+function MainController ($scope, $http, $timeout, $location) {
     this.$scope = $scope;
     $scope.vm = this;
 
     this.$http = $http;
     this.$timeout = $timeout;
+    this.$location = $location;
 
     this.result = {"name":"asdkasdkahsdkahsjdkas"};
 
@@ -102,7 +103,6 @@ angular.extend(MainController.prototype, {
                 saveToPhotoAlbum: false
             });
 
-            this.$scope;
         } else {
             // desktop
             var url = "http://siddiq.email/hackathon/uploaded-images/2015-08-01-11-48-19-065414.jpg";
@@ -111,6 +111,8 @@ angular.extend(MainController.prototype, {
                 console.log('now i am back in caller', data);
                 //that.result = {"name":"asdkasdkahsdkahsjdkas"};
                 document.getElementById('results').innerHTML = data.name;
+                that.$location.path('/products');
+                that.$scope.$root.$emit('keyword1', data.name);
             }});
 
           this.result = {"name":"asdkasdkahsdkahsjdkas"};
@@ -193,4 +195,4 @@ angular.extend(MainController.prototype, {
 ProductsController.$inject = ['$scope'];
 
 angular.module('main', ['ngResource'])
-    .controller('controllers.main', ['$scope', '$http', '$timeout', MainController]);
+    .controller('controllers.main', ['$scope', '$http', '$timeout', '$location', MainController]);
