@@ -65,7 +65,7 @@ angular.extend(MainController.prototype, {
                 }
 
                 // Display the picture.
-                document.getElementById('myimage').src = src;
+                document.getElementById('myimage').style.backgroundImage = 'url("' + src +  '")';
 
                 // Upload the picture.
                 uploadPhoto(src, function (r) {
@@ -110,7 +110,8 @@ angular.extend(MainController.prototype, {
         } else {
             // desktop
             var url = "http://siddiq.email/hackathon/uploaded-images/2015-08-01-11-48-19-065414.jpg";
-            document.getElementById('myimage').src = url;
+            document.getElementById('myimage').style.backgroundImage = 'url("' + url +  '")';
+
             that.cloudSightClient({url: url, success: function (data) {
                 //that.result = {"name": data.name};
                 document.getElementById('results').innerHTML = data.name;
@@ -144,6 +145,7 @@ angular.extend(MainController.prototype, {
         cfg.scope = cfg.scope || this;
         cfg.success = cfg.success || function() {};
         cfg.error = cfg.error || function() {};
+        document.getElementById('loading').style.display = 'block';
 
         var BASE_URL = 'https://api.cloudsightapi.com',
             apikey = 'bZBDqGjCmsIg1Q7TUDDToA',

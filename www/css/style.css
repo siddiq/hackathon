@@ -1,1 +1,14 @@
 /* Empty. Add your own CSS if you like */
+
+#loading {
+	display: none;
+	text-align: center;
+}
+
+
+#myimage {
+	border: 1px dashed #ccc; 
+	display: block; 
+	width: 100vw;
+	height: 100vw;
+}
