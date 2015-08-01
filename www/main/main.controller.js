@@ -149,48 +149,69 @@ angular.extend(MainController.prototype, {
             apikey = 'bZBDqGjCmsIg1Q7TUDDToA',
             that = this;
 
-        this.$http({
-            method: debug ? 'GET': 'POST',
-            url: debug ? '/dummy/cloudsight-rec1.json' : BASE_URL + '/image_requests',
-            headers: {
-                "Authorization": "CloudSight " + apikey,
-            },
-            data: JSON.stringify({
-                "remote_image_url": cfg.url,
-                "locale": "en-US"
-            })
-        }).success(function (data, status, headers, config) {
-            console.log('cloudsight:image_requests:success');
-            var token = data.token;
-            console.log("token=" + token);
+        if (debug) {
+            // {"token":"L4b2l5FwO2glI3EgFlDApA","url":"//d1spq65clhrg1f.cloudfront.net/uploads/image_request/image/28/28024/28024513/2015-08-01-11-48-19-065414.jpg"}
+            var token = "L4b2l5FwO2glI3EgFlDApA";
+            console.log("my token=" + token);
             pollResponse(token);
-        }).error(function(data, status, headers, config) {
-            console.log('cloudsight:image_requests:error....' + JSON.stringify(arguments));
-        });
+        } else {
+            this.$http({
+                method: 'POST',
+                url: BASE_URL + '/image_requests',
+                headers: {
+                    "Authorization": "CloudSight " + apikey,
+                },
+                data: JSON.stringify({
+                    "remote_image_url": cfg.url,
+                    "locale": "en-US"
+                })
+            }).success(function (data, status, headers, config) {
+                console.log('cloudsight:image_requests:success');
+                var token = data.token;
+                console.log("data=" + data);
+                console.log("token=" + token);
+                pollResponse(token);
+            }).error(function(data, status, headers, config) {
+                console.log('cloudsight:image_requests:error....' + JSON.stringify(arguments));
+            });            
+        }
 
         function pollResponse(token) {
-            that.$timeout(function () {
-                that.$http({
-                    method: 'GET',
-                    url: debug ? '/dummy/cloudsight-rec2.json' : BASE_URL + '/image_responses/' + token,
-                    headers: {
-                        "Authorization": "CloudSight " + apikey
-                    }
-                }).success(function (data, status, headers, config) {
-                    console.log('cloudsight:image_responses:success');
-                    console.log(data.status);
-                    if (data.status === "completed") {
-                        console.log(data.name);
-                        //console.log(JSON.stringify(data, null, 3));
-                        cfg.success && cfg.success.call(cfg.scope, data);
-                    } else {
-                        // try again
-                        pollResponse(token);
-                    }
-                }).error(function(data, status, headers, config) {
-                    console.log('cloudsight:image_responses:error');
-                });
-            }, 1000);
+            if (debug) {
+                that.$timeout(function () {
+                    cfg.success && cfg.success.call(cfg.scope, {
+                        "status": "completed",
+                        "name": "silver aviator frame sunglasses",
+                        "categories": [
+                        "fashion"
+                    ]
+                    });
+                }, 1000);
+            } else {
+                that.$timeout(function () {
+                    that.$http({
+                        method: 'GET',
+                        url: debug ? '/dummy/cloudsight-rec2.json' : BASE_URL + '/image_responses/' + token,
+                        headers: {
+                            "Authorization": "CloudSight " + apikey
+                        }
+                    }).success(function (data, status, headers, config) {
+                        console.log('cloudsight:image_responses:success');
+                        console.log(data.status);
+                        if (data.status === "completed") {
+                            console.log(data.name);
+                            //console.log(JSON.stringify(data, null, 3));
+                            cfg.success && cfg.success.call(cfg.scope, data);
+                        } else {
+                            // try again
+                            pollResponse(token);
+                        }
+                    }).error(function(data, status, headers, config) {
+                        console.log('cloudsight:image_responses:error');
+                    });
+                }, 1000);
+            }
+
         }
     }
 });
