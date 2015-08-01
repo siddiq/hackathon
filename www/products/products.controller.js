@@ -9,7 +9,7 @@ function ProductsController ($scope, $resource, $rootScope, $timeout) {
     var remoteSouq = 'https://api.souq.com/v1/products';
     var remote = 'https://secure-cliffs-9529.herokuapp.com/api/products';
 
-    this.items = $resource(local, {
+    this.items = $resource(remote, {
 
     }, {
         search: {
