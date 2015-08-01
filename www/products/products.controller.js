@@ -1,5 +1,7 @@
 function ProductsController ($scope) {
     this.$scope = $scope;
+    $scope.vm = this;
+    this.fetch();
 }
 
 angular.extend(ProductsController.prototype, {

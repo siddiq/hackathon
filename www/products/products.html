@@ -1,3 +1,11 @@
 <ion-content>
-    Prod
+    <div class="list" >
+
+        <a class="item item-thumbnail-left" href="#" ng-repeat="item in items">
+            <img ng-src="{{item.image}}">
+            <h2>{{item.caption}}</h2>
+            <p>{{item.desc}}</p>
+        </a>
+
+    </div>
 </ion-content>
