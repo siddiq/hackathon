@@ -112,16 +112,12 @@ angular.extend(MainController.prototype, {
             var url = "http://siddiq.email/hackathon/uploaded-images/2015-08-01-11-48-19-065414.jpg";
             document.getElementById('myimage').src = url;
             that.cloudSightClient({url: url, success: function (data) {
-                console.log('now i am back in caller', data);
-                //that.result = {"name":"asdkasdkahsdkahsjdkas"};
+                //that.result = {"name": data.name};
                 document.getElementById('results').innerHTML = data.name;
                 that.$location.path('products');
                 that.$scope.$root.keyword = data.name;
                 that.$scope.$root.$emit('keyword1', data.name);
             }});
-
-          this.result = {"name":"asdkasdkahsdkahsjdkas"};
-
         }
     },
 
@@ -182,7 +178,9 @@ angular.extend(MainController.prototype, {
                     }
                 }).success(function (data, status, headers, config) {
                     console.log('cloudsight:image_responses:success');
+                    console.log(data.status);
                     if (data.status === "completed") {
+                        console.log(data.name);
                         //console.log(JSON.stringify(data, null, 3));
                         cfg.success && cfg.success.call(cfg.scope, data);
                     } else {
