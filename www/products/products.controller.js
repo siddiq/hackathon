@@ -3,7 +3,13 @@ function ProductsController ($scope, $resource) {
     $scope.vm = this;
     this.$resource = $resource;
 
-    this.items = $resource('https://api.souq.com/v1/products', {
+    this.keyword = 'Iphone';
+
+    var local = 'http://localhost:5000/api/products';
+    var remoteSouq = 'https://api.souq.com/v1/products';
+    var remote = 'https://secure-cliffs-9529.herokuapp.com/api/products';
+
+    this.items = $resource(local, {
 
     }, {
         search: {
@@ -17,11 +23,19 @@ function ProductsController ($scope, $resource) {
                 format:'json',
                 'app_id':7875262,
                 'app_secret': 'YxpMgQJiVLQGNUclUX5M'
-            }
+            },
+            cache: true
         }
     });
 
-    this.search('rfe');
+    this.search(this.keyword);
+
+    $scope.$watch(function () {
+        return this.keyword;
+    }.bind(this), function (newVal, oldVal) {
+        if (newVal === oldVal) return;
+        this.search(newVal);
+    }.bind(this));
 }
 
 ProductsController.prototype.display = function (items) {

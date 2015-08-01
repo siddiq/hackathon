@@ -1,4 +1,8 @@
 <ion-content>
+    <label class="item item-input item-floating-label">
+        <span class="input-label">Searching for:</span>
+        <input type="text" placeholder="Searching for:" ng-model="vm.keyword" ng-model-options="{ debounce: 250 }">
+    </label>
     <div class="list" >
 
         <a class="item item-thumbnail-left" href="#" ng-repeat="item in items">
