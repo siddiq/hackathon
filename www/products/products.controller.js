@@ -3,7 +3,7 @@ function ProductsController ($scope, $resource, $rootScope, $timeout) {
     $scope.vm = this;
     this.$resource = $resource;
     this.$rootScope = $rootScope;
-    $rootScope.keyword = $rootScope.keyword || '';
+    this.keyword = $rootScope.keyword;
 
     var local = 'http://localhost:5000/api/products';
     var remoteSouq = 'https://api.souq.com/v1/products';
@@ -28,28 +28,29 @@ function ProductsController ($scope, $resource, $rootScope, $timeout) {
         }
     });
 
-    //this.search(this.keyword);
-
+    if (this.keyword) {
+        this.search(this.keyword);
+    }
+/*
     $scope.$watch(function () {
         return $rootScope.keyword;
     }.bind(this), function (newVal, oldVal) {
         this.keyword = newVal;
         this.search(newVal);
-    }.bind(this));
+    }.bind(this));*/
 
     $scope.$watch(function () {
         return this.keyword
     }.bind(this), function (newVal, oldVal) {
             if (newVal === oldVal || newVal === $rootScope.keyword) return;
             $rootScope.keyword = newVal;
+            this.search(newVal);
         }.bind(this)
     );
 
     $rootScope.$on('keyword1', function (e, word) {
         $rootScope.keyword = word;
-        $timeout(function () {
-            $scope.$digest();
-        });
+        this.search(word);
     }.bind(this));
 }
 

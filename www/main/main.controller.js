@@ -112,6 +112,7 @@ angular.extend(MainController.prototype, {
                 //that.result = {"name":"asdkasdkahsdkahsjdkas"};
                 document.getElementById('results').innerHTML = data.name;
                 that.$location.path('/products');
+                that.$scope.$root.keyword = data.name;
                 that.$scope.$root.$emit('keyword1', data.name);
             }});
 
