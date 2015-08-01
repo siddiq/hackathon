@@ -1,0 +1,1591 @@
+{
+  "meta": {
+    "status": 200,
+    "response": "OK",
+    "message": "",
+    "showing": 10,
+    "total": 21548,
+    "page": 1,
+    "pages": 2155
+  },
+  "data": {
+    "products": [
+      {
+        "id": "7274966",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 6 With FaceTime - 16GB, 4G LTE, Silver",
+        "images": {
+          "XS": [
+            "http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_XS_7274966_5621616.jpg"
+          ],
+          "S": [
+            "http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_S_7274966_5621616.jpg"
+          ],
+          "M": [
+            "http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_M_7274966_5621616.jpg"
+          ],
+          "L": [
+            "http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_L_7274966_5621616.jpg"
+          ],
+          "XL": [
+            "http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_XL_7274966_5621616.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2749,
+        "offer_id": "39954500033",
+        "offer_price": 2249,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-6-with-facetime-16gb-4g-lte-silver-7274966/i/",
+        "rating_count": 711,
+        "ean": [
+          "2724293150348"
+        ]
+      },
+      {
+        "id": "7277797",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 6 With FaceTime - 64GB, 4G LTE, Space Gray",
+        "images": {
+          "XS": [
+            "http://cf2.souqcdn.com/item/2014/09/10/72/77/79/7/item_XS_7277797_5585942.jpg"
+          ],
+          "S": [
+            "http://cf2.souqcdn.com/item/2014/09/10/72/77/79/7/item_S_7277797_5585942.jpg"
+          ],
+          "M": [
+            "http://cf2.souqcdn.com/item/2014/09/10/72/77/79/7/item_M_7277797_5585942.jpg"
+          ],
+          "L": [
+            "http://cf2.souqcdn.com/item/2014/09/10/72/77/79/7/item_L_7277797_5585942.jpg"
+          ],
+          "XL": [
+            "http://cf2.souqcdn.com/item/2014/09/10/72/77/79/7/item_XL_7277797_5585942.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2999,
+        "offer_id": "36275700033",
+        "offer_price": 2699,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-6-with-facetime-64gb-4g-lte-space-gray-7277797/i/",
+        "rating_count": 859,
+        "ean": [
+          "2724293178892",
+          "0885909950713,"
+        ]
+      },
+      {
+        "id": "7278384",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 6 Plus With FaceTime - 16GB, 4G LTE, Space Gray",
+        "images": {
+          "XS": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/4/item_XS_7278384_5621674.jpg"
+          ],
+          "S": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/4/item_S_7278384_5621674.jpg"
+          ],
+          "M": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/4/item_M_7278384_5621674.jpg"
+          ],
+          "L": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/4/item_L_7278384_5621674.jpg"
+          ],
+          "XL": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/4/item_XL_7278384_5621674.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 3149,
+        "offer_id": "37726600033",
+        "offer_price": 2549,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-6-plus-with-facetime-16gb-4g-lte-space-gray-7278384/i/",
+        "rating_count": 291,
+        "ean": [
+          "2724293184992"
+        ]
+      },
+      {
+        "id": "7277711",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 6 With FaceTime - 128GB, 4G LTE, Gold",
+        "images": {
+          "XS": [
+            "http://cf1.souqcdn.com/item/2014/09/10/72/77/71/1/item_XS_7277711_5585757.jpg"
+          ],
+          "S": [
+            "http://cf1.souqcdn.com/item/2014/09/10/72/77/71/1/item_S_7277711_5585757.jpg"
+          ],
+          "M": [
+            "http://cf1.souqcdn.com/item/2014/09/10/72/77/71/1/item_M_7277711_5585757.jpg"
+          ],
+          "L": [
+            "http://cf1.souqcdn.com/item/2014/09/10/72/77/71/1/item_L_7277711_5585757.jpg"
+          ],
+          "XL": [
+            "http://cf1.souqcdn.com/item/2014/09/10/72/77/71/1/item_XL_7277711_5585757.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 3999,
+        "offer_id": "38645800033",
+        "offer_price": 3344.98,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-6-with-facetime-128gb-4g-lte-gold-7277711/i/",
+        "rating_count": 308,
+        "ean": [
+          "2724293178038",
+          "0885909971305,"
+        ]
+      },
+      {
+        "id": "7278388",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 6 Plus With FaceTime - 64GB, 4G LTE, Space Gray",
+        "images": {
+          "XS": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/8/item_XS_7278388_5621680.jpg"
+          ],
+          "S": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/8/item_S_7278388_5621680.jpg"
+          ],
+          "M": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/8/item_M_7278388_5621680.jpg"
+          ],
+          "L": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/8/item_L_7278388_5621680.jpg"
+          ],
+          "XL": [
+            "http://cf3.souqcdn.com/item/2014/09/14/72/78/38/8/item_XL_7278388_5621680.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 3499,
+        "offer_id": "34808900033",
+        "offer_price": 3149,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-6-plus-with-facetime-64gb-4g-lte-space-gray-7278388/i/",
+        "rating_count": 183,
+        "ean": [
+          "2724293185036"
+        ]
+      },
+      {
+        "id": "5754633",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 5S - 16GB, 4G LTE, Silver",
+        "images": {
+          "XS": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/63/3/item_XS_5754633_6004872.jpg"
+          ],
+          "S": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/63/3/item_S_5754633_6004872.jpg"
+          ],
+          "M": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/63/3/item_M_5754633_6004872.jpg"
+          ],
+          "L": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/63/3/item_L_5754633_6004872.jpg"
+          ],
+          "XL": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/63/3/item_XL_5754633_6004872.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2749,
+        "offer_id": "39579000033",
+        "offer_price": 1749.98,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-5s-16gb-4g-lte-silver-5754633/i/",
+        "rating_count": 337,
+        "ean": [
+          "2724279829077",
+          "885909727452, 8"
+        ]
+      },
+      {
+        "id": "5754742",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 5S - 16GB, 4G LTE, Space Gray",
+        "images": {
+          "XS": [
+            "http://cf5.souqcdn.com/item/2014/10/29/57/54/74/2/item_XS_5754742_6004683.jpg"
+          ],
+          "S": [
+            "http://cf5.souqcdn.com/item/2014/10/29/57/54/74/2/item_S_5754742_6004683.jpg"
+          ],
+          "M": [
+            "http://cf5.souqcdn.com/item/2014/10/29/57/54/74/2/item_M_5754742_6004683.jpg"
+          ],
+          "L": [
+            "http://cf5.souqcdn.com/item/2014/10/29/57/54/74/2/item_L_5754742_6004683.jpg"
+          ],
+          "XL": [
+            "http://cf5.souqcdn.com/item/2014/10/29/57/54/74/2/item_XL_5754742_6004683.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2749,
+        "offer_id": "39521200033",
+        "offer_price": 1670,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-5s-16gb-4g-lte-space-gray-5754742/i/",
+        "rating_count": 567,
+        "ean": [
+          "2724279830165",
+          "885909727445, 8"
+        ]
+      },
+      {
+        "id": "5754385",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 5S - 16GB, 4G LTE, Gold",
+        "images": {
+          "XS": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/38/5/item_XS_5754385_6004719.jpg"
+          ],
+          "S": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/38/5/item_S_5754385_6004719.jpg"
+          ],
+          "M": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/38/5/item_M_5754385_6004719.jpg"
+          ],
+          "L": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/38/5/item_L_5754385_6004719.jpg"
+          ],
+          "XL": [
+            "http://cf1.souqcdn.com/item/2014/10/29/57/54/38/5/item_XL_5754385_6004719.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2599,
+        "offer_id": "39520600033",
+        "offer_price": 1825,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-5s-16gb-4g-lte-gold-5754385/i/",
+        "rating_count": 883,
+        "ean": [
+          "2724279826564",
+          "2724285478603",
+          "2724288020441"
+        ]
+      },
+      {
+        "id": "5754128",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 5C - 16GB, 4G LTE, Blue",
+        "images": {
+          "XS": [
+            "http://cf3.souqcdn.com/item/2014/10/29/57/54/12/8/item_XS_5754128_6004588.jpg"
+          ],
+          "S": [
+            "http://cf3.souqcdn.com/item/2014/10/29/57/54/12/8/item_S_5754128_6004588.jpg"
+          ],
+          "M": [
+            "http://cf3.souqcdn.com/item/2014/10/29/57/54/12/8/item_M_5754128_6004588.jpg"
+          ],
+          "L": [
+            "http://cf3.souqcdn.com/item/2014/10/29/57/54/12/8/item_L_5754128_6004588.jpg"
+          ],
+          "XL": [
+            "http://cf3.souqcdn.com/item/2014/10/29/57/54/12/8/item_XL_5754128_6004588.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2299,
+        "offer_id": "39599800033",
+        "offer_price": 1199.99,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-5c-16gb-4g-lte-blue-5754128/i/",
+        "rating_count": 81,
+        "ean": [
+          "2724279823969"
+        ]
+      },
+      {
+        "id": "4685785",
+        "product_type_id": "33",
+        "product_type_label_plural": "Mobile Phones",
+        "label": "Apple iPhone 5 (16 GB, WiFi, Black & Slate)",
+        "images": {
+          "XS": [
+            "http://cf1.souqcdn.com/item/2014/10/29/46/85/78/5/item_XS_4685785_6004102.jpg"
+          ],
+          "S": [
+            "http://cf1.souqcdn.com/item/2014/10/29/46/85/78/5/item_S_4685785_6004102.jpg"
+          ],
+          "M": [
+            "http://cf1.souqcdn.com/item/2014/10/29/46/85/78/5/item_M_4685785_6004102.jpg"
+          ],
+          "L": [
+            "http://cf1.souqcdn.com/item/2014/10/29/46/85/78/5/item_L_4685785_6004102.jpg"
+          ],
+          "XL": [
+            "http://cf1.souqcdn.com/item/2014/10/29/46/85/78/5/item_XL_4685785_6004102.jpg"
+          ]
+        },
+        "currency": "AED",
+        "msrp": 2749,
+        "offer_id": "38952600033",
+        "offer_price": 1444,
+        "link": "http://uae.souq.com/ae-en/apple-iphone-5-16-gb-wifi-black-slate-4685785/i/",
+        "rating_count": 540,
+        "ean": [
+          "2724269103828"
+        ]
+      }
+    ],
+    "facets": {
+      "general_facets": [
+        {
+          "value": "Retail_seller",
+          "label": "retail_seller",
+          "values": [
+            {
+              "value": "False",
+              "count": 21141
+            },
+            {
+              "value": "True",
+              "count": 406
+            }
+          ]
+        },
+        {
+          "value": "Conditions",
+          "label": "Condition",
+          "values": [
+            {
+              "value": "New",
+              "count": 21453
+            },
+            {
+              "value": "Open Box New",
+              "count": 54
+            },
+            {
+              "value": "Used",
+              "count": 36
+            },
+            {
+              "value": "Refurbished",
+              "count": 19
+            }
+          ]
+        },
+        {
+          "value": "Price",
+          "label": "Price",
+          "values": [
+            {
+              "value": "6900",
+              "count": 2394
+            },
+            {
+              "value": "8900",
+              "count": 1510
+            },
+            {
+              "value": "4900",
+              "count": 725
+            },
+            {
+              "value": "3500",
+              "count": 710
+            },
+            {
+              "value": "3900",
+              "count": 487
+            },
+            {
+              "value": "4500",
+              "count": 463
+            },
+            {
+              "value": "9900",
+              "count": 357
+            },
+            {
+              "value": "3000",
+              "count": 330
+            },
+            {
+              "value": "2900",
+              "count": 321
+            },
+            {
+              "value": "2500",
+              "count": 313
+            },
+            {
+              "value": "17000",
+              "count": 293
+            },
+            {
+              "value": "5900",
+              "count": 207
+            },
+            {
+              "value": "5500",
+              "count": 206
+            },
+            {
+              "value": "4000",
+              "count": 205
+            },
+            {
+              "value": "7500",
+              "count": 201
+            },
+            {
+              "value": "7000",
+              "count": 200
+            },
+            {
+              "value": "5000",
+              "count": 184
+            },
+            {
+              "value": "3800",
+              "count": 180
+            },
+            {
+              "value": "7900",
+              "count": 165
+            },
+            {
+              "value": "6500",
+              "count": 162
+            },
+            {
+              "value": "2000",
+              "count": 140
+            },
+            {
+              "value": "12900",
+              "count": 132
+            },
+            {
+              "value": "1900",
+              "count": 130
+            },
+            {
+              "value": "6000",
+              "count": 128
+            },
+            {
+              "value": "14900",
+              "count": 118
+            },
+            {
+              "value": "8500",
+              "count": 116
+            },
+            {
+              "value": "3300",
+              "count": 111
+            },
+            {
+              "value": "3700",
+              "count": 111
+            },
+            {
+              "value": "4800",
+              "count": 111
+            },
+            {
+              "value": "9000",
+              "count": 102
+            },
+            {
+              "value": "4400",
+              "count": 98
+            },
+            {
+              "value": "8000",
+              "count": 95
+            },
+            {
+              "value": "3999",
+              "count": 88
+            },
+            {
+              "value": "2700",
+              "count": 87
+            },
+            {
+              "value": "4300",
+              "count": 87
+            },
+            {
+              "value": "2200",
+              "count": 86
+            },
+            {
+              "value": "1500",
+              "count": 85
+            },
+            {
+              "value": "2400",
+              "count": 82
+            },
+            {
+              "value": "4700",
+              "count": 77
+            },
+            {
+              "value": "10900",
+              "count": 76
+            },
+            {
+              "value": "8800",
+              "count": 72
+            },
+            {
+              "value": "6800",
+              "count": 71
+            },
+            {
+              "value": "3600",
+              "count": 70
+            },
+            {
+              "value": "2999",
+              "count": 67
+            },
+            {
+              "value": "2800",
+              "count": 64
+            },
+            {
+              "value": "5400",
+              "count": 63
+            },
+            {
+              "value": "9500",
+              "count": 63
+            },
+            {
+              "value": "3400",
+              "count": 61
+            },
+            {
+              "value": "2300",
+              "count": 59
+            },
+            {
+              "value": "3200",
+              "count": 59
+            },
+            {
+              "value": "7800",
+              "count": 56
+            },
+            {
+              "value": "2600",
+              "count": 55
+            },
+            {
+              "value": "11000",
+              "count": 54
+            },
+            {
+              "value": "1700",
+              "count": 53
+            },
+            {
+              "value": "3498",
+              "count": 53
+            },
+            {
+              "value": "1800",
+              "count": 52
+            },
+            {
+              "value": "5300",
+              "count": 52
+            },
+            {
+              "value": "5800",
+              "count": 49
+            },
+            {
+              "value": "4999",
+              "count": 48
+            },
+            {
+              "value": "6200",
+              "count": 46
+            },
+            {
+              "value": "7700",
+              "count": 45
+            },
+            {
+              "value": "8700",
+              "count": 45
+            },
+            {
+              "value": "19900",
+              "count": 45
+            },
+            {
+              "value": "4990",
+              "count": 44
+            },
+            {
+              "value": "7400",
+              "count": 44
+            },
+            {
+              "value": "11900",
+              "count": 42
+            },
+            {
+              "value": "14500",
+              "count": 42
+            },
+            {
+              "value": "4200",
+              "count": 39
+            },
+            {
+              "value": "9800",
+              "count": 37
+            },
+            {
+              "value": "10000",
+              "count": 37
+            },
+            {
+              "value": "8600",
+              "count": 36
+            },
+            {
+              "value": "6700",
+              "count": 35
+            },
+            {
+              "value": "5200",
+              "count": 34
+            },
+            {
+              "value": "15000",
+              "count": 34
+            },
+            {
+              "value": "4100",
+              "count": 33
+            },
+            {
+              "value": "12500",
+              "count": 33
+            },
+            {
+              "value": "17500",
+              "count": 31
+            },
+            {
+              "value": "3299",
+              "count": 30
+            },
+            {
+              "value": "3998",
+              "count": 30
+            },
+            {
+              "value": "4600",
+              "count": 30
+            },
+            {
+              "value": "9300",
+              "count": 30
+            },
+            {
+              "value": "12000",
+              "count": 30
+            },
+            {
+              "value": "13900",
+              "count": 30
+            },
+            {
+              "value": "3499",
+              "count": 29
+            },
+            {
+              "value": "8400",
+              "count": 27
+            },
+            {
+              "value": "16900",
+              "count": 27
+            },
+            {
+              "value": "9700",
+              "count": 26
+            },
+            {
+              "value": "24900",
+              "count": 26
+            },
+            {
+              "value": "2100",
+              "count": 25
+            },
+            {
+              "value": "4498",
+              "count": 25
+            },
+            {
+              "value": "6600",
+              "count": 25
+            },
+            {
+              "value": "4499",
+              "count": 24
+            },
+            {
+              "value": "5700",
+              "count": 24
+            },
+            {
+              "value": "6400",
+              "count": 24
+            },
+            {
+              "value": "7300",
+              "count": 24
+            },
+            {
+              "value": "1400",
+              "count": 23
+            },
+            {
+              "value": "3100",
+              "count": 23
+            },
+            {
+              "value": "4899",
+              "count": 23
+            },
+            {
+              "value": "11800",
+              "count": 23
+            },
+            {
+              "value": "2990",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "value": "price_range",
+          "label": "Price Range",
+          "values": [
+            {
+              "min": 2000,
+              "max": 3999,
+              "count": 3692,
+              "value": "2000 - 3999"
+            },
+            {
+              "min": 4000,
+              "max": 5999,
+              "count": 2851,
+              "value": "4000 - 5999"
+            },
+            {
+              "min": 6000,
+              "max": 7999,
+              "count": 3620,
+              "value": "6000 - 7999"
+            },
+            {
+              "min": 8000,
+              "max": 10000,
+              "count": 2516,
+              "value": "8000 - 10000"
+            }
+          ]
+        },
+        {
+          "value": "product_type",
+          "label": "Product Type",
+          "values": [
+            {
+              "label": "Mobile Phone Accessories",
+              "value": "26",
+              "type_id": "26",
+              "count": 15144
+            },
+            {
+              "label": "Chargers",
+              "value": "351",
+              "type_id": "351",
+              "count": 2713
+            },
+            {
+              "label": "Headsets",
+              "value": "373",
+              "type_id": "373",
+              "count": 1048
+            },
+            {
+              "label": "Cable",
+              "value": "29",
+              "type_id": "29",
+              "count": 881
+            },
+            {
+              "label": "Car Audio and Video Accessories",
+              "value": "330",
+              "type_id": "330",
+              "count": 444
+            },
+            {
+              "label": "Speakers",
+              "value": "22",
+              "type_id": "22",
+              "count": 366
+            },
+            {
+              "label": "PC Media Players & Speakers",
+              "value": "189",
+              "type_id": "189",
+              "count": 183
+            },
+            {
+              "label": "Headphones",
+              "value": "372",
+              "type_id": "372",
+              "count": 179
+            },
+            {
+              "label": "Rechargeable Batteries",
+              "value": "87",
+              "type_id": "87",
+              "count": 157
+            },
+            {
+              "label": "Docking Station",
+              "value": "51",
+              "type_id": "51",
+              "count": 69
+            },
+            {
+              "label": "Tablet Accessories",
+              "value": "181",
+              "type_id": "181",
+              "count": 59
+            },
+            {
+              "label": "Mobile Phones",
+              "value": "33",
+              "type_id": "33",
+              "count": 34
+            },
+            {
+              "label": "MP3,MP4 Players Accessories ",
+              "value": "247",
+              "type_id": "247",
+              "count": 23
+            },
+            {
+              "label": "USB Flash Drives",
+              "value": "369",
+              "type_id": "369",
+              "count": 23
+            },
+            {
+              "label": "Audio Accessories",
+              "value": "30",
+              "type_id": "30",
+              "count": 21
+            },
+            {
+              "label": "Camera and camcorder Accessories",
+              "value": "25",
+              "type_id": "25",
+              "count": 20
+            },
+            {
+              "label": "MP3 & MP4 players",
+              "value": "23",
+              "type_id": "23",
+              "count": 15
+            },
+            {
+              "label": "Projectors",
+              "value": "13",
+              "type_id": "13",
+              "count": 14
+            },
+            {
+              "label": "Educational Books",
+              "value": "357",
+              "type_id": "357",
+              "count": 14
+            },
+            {
+              "label": "Games Gadgets & Accessories",
+              "value": "7",
+              "type_id": "7",
+              "count": 13
+            },
+            {
+              "label": "Car Audio",
+              "value": "35",
+              "type_id": "35",
+              "count": 12
+            },
+            {
+              "label": "Keyboards",
+              "value": "61",
+              "type_id": "61",
+              "count": 12
+            },
+            {
+              "label": "Fitness Technology",
+              "value": "498",
+              "type_id": "498",
+              "count": 11
+            },
+            {
+              "label": "Hand tools",
+              "value": "319",
+              "type_id": "319",
+              "count": 9
+            },
+            {
+              "label": "Security & Surveillance Systems",
+              "value": "260",
+              "type_id": "260",
+              "count": 7
+            },
+            {
+              "label": "Microphones",
+              "value": "182",
+              "type_id": "182",
+              "count": 4
+            },
+            {
+              "label": "Musical Instruments",
+              "value": "320",
+              "type_id": "320",
+              "count": 4
+            },
+            {
+              "label": "Clock Radios",
+              "value": "401",
+              "type_id": "401",
+              "count": 4
+            },
+            {
+              "label": "Light Bulbs",
+              "value": "134",
+              "type_id": "134",
+              "count": 3
+            },
+            {
+              "label": "Toys",
+              "value": "24",
+              "type_id": "24",
+              "count": 3
+            },
+            {
+              "label": "Recording and Studio Equipment",
+              "value": "252",
+              "type_id": "252",
+              "count": 3
+            },
+            {
+              "label": "Sporting Goods",
+              "value": "322",
+              "type_id": "322",
+              "count": 3
+            },
+            {
+              "label": "Clocks",
+              "value": "339",
+              "type_id": "339",
+              "count": 3
+            },
+            {
+              "label": "Car Care Products",
+              "value": "363",
+              "type_id": "363",
+              "count": 3
+            },
+            {
+              "label": "Card Readers / Writers",
+              "value": "370",
+              "type_id": "370",
+              "count": 3
+            },
+            {
+              "label": "Tuners",
+              "value": "411",
+              "type_id": "411",
+              "count": 3
+            },
+            {
+              "label": "Eyewear",
+              "value": "433",
+              "type_id": "433",
+              "count": 3
+            },
+            {
+              "label": "Watches",
+              "value": "490",
+              "type_id": "490",
+              "count": 3
+            },
+            {
+              "label": "Souq Combos",
+              "value": "502",
+              "type_id": "502",
+              "count": 3
+            },
+            {
+              "label": "Router",
+              "value": "88",
+              "type_id": "88",
+              "count": 3
+            },
+            {
+              "label": "Prepaid cards",
+              "value": "179",
+              "type_id": "179",
+              "count": 2
+            },
+            {
+              "label": "Computer & Laptop Accessories ",
+              "value": "187",
+              "type_id": "187",
+              "count": 2
+            },
+            {
+              "label": "Amplifiers and Receivers",
+              "value": "21",
+              "type_id": "21",
+              "count": 2
+            },
+            {
+              "label": "Bags & Carry Cases",
+              "value": "40",
+              "type_id": "40",
+              "count": 2
+            },
+            {
+              "label": "Portable Radios",
+              "value": "400",
+              "type_id": "400",
+              "count": 2
+            },
+            {
+              "label": "Media Gateways",
+              "value": "407",
+              "type_id": "407",
+              "count": 2
+            },
+            {
+              "label": "Universal Remote Controls",
+              "value": "408",
+              "type_id": "408",
+              "count": 2
+            },
+            {
+              "label": "Musical Instruments Parts",
+              "value": "456",
+              "type_id": "456",
+              "count": 2
+            },
+            {
+              "label": "Power supplies",
+              "value": "83",
+              "type_id": "83",
+              "count": 2
+            },
+            {
+              "label": "Sports Equipments",
+              "value": "139",
+              "type_id": "139",
+              "count": 1
+            },
+            {
+              "label": "TV and Satellite Accessories",
+              "value": "28",
+              "type_id": "28",
+              "count": 1
+            },
+            {
+              "label": "Men's Jewelry",
+              "value": "292",
+              "type_id": "292",
+              "count": 1
+            },
+            {
+              "label": "Kitchen and Dining",
+              "value": "316",
+              "type_id": "316",
+              "count": 1
+            },
+            {
+              "label": "Stationary",
+              "value": "336",
+              "type_id": "336",
+              "count": 1
+            },
+            {
+              "label": "Memory Cards",
+              "value": "398",
+              "type_id": "398",
+              "count": 1
+            },
+            {
+              "label": "Barcode reader",
+              "value": "41",
+              "type_id": "41",
+              "count": 1
+            },
+            {
+              "label": "Accessories",
+              "value": "466",
+              "type_id": "466",
+              "count": 1
+            },
+            {
+              "label": "Network cards & adapters",
+              "value": "70",
+              "type_id": "70",
+              "count": 1
+            },
+            {
+              "label": "Networking Tools",
+              "value": "72",
+              "type_id": "72",
+              "count": 1
+            },
+            {
+              "label": "Office equipment",
+              "value": "76",
+              "type_id": "76",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "product_specific_facets": [
+        {
+          "attribute_id": "7",
+          "label": "Brand",
+          "values": [
+            {
+              "value": "Other",
+              "count": 9152
+            },
+            {
+              "value": "Stylizedd",
+              "count": 3447
+            },
+            {
+              "value": "Others",
+              "count": 1397
+            },
+            {
+              "value": "Margoun",
+              "count": 826
+            },
+            {
+              "value": "Calans",
+              "count": 749
+            },
+            {
+              "value": "Ozone",
+              "count": 482
+            },
+            {
+              "value": "Cellairis",
+              "count": 288
+            },
+            {
+              "value": "Nillkin",
+              "count": 203
+            },
+            {
+              "value": "Spigen Sgp",
+              "count": 199
+            },
+            {
+              "value": "Apple",
+              "count": 160
+            },
+            {
+              "value": "Memorix",
+              "count": 121
+            },
+            {
+              "value": "Dimax",
+              "count": 112
+            },
+            {
+              "value": "Cygnett",
+              "count": 106
+            },
+            {
+              "value": "Loud T-shirts",
+              "count": 93
+            },
+            {
+              "value": "Kristall",
+              "count": 85
+            },
+            {
+              "value": "Verus",
+              "count": 85
+            },
+            {
+              "value": "Baseus",
+              "count": 84
+            },
+            {
+              "value": "Otterbox",
+              "count": 74
+            },
+            {
+              "value": "Rearth",
+              "count": 72
+            },
+            {
+              "value": "Belkin",
+              "count": 66
+            },
+            {
+              "value": "Amzer",
+              "count": 61
+            },
+            {
+              "value": "Loud Universe",
+              "count": 56
+            },
+            {
+              "value": "Usams",
+              "count": 55
+            },
+            {
+              "value": "Star",
+              "count": 53
+            },
+            {
+              "value": "Pure Lines",
+              "count": 51
+            },
+            {
+              "value": "Ferrari",
+              "count": 47
+            },
+            {
+              "value": "Griffin",
+              "count": 47
+            },
+            {
+              "value": "Max",
+              "count": 45
+            },
+            {
+              "value": "Rubik",
+              "count": 45
+            },
+            {
+              "value": "Momax",
+              "count": 44
+            },
+            {
+              "value": "Joyroom",
+              "count": 43
+            },
+            {
+              "value": "Equew",
+              "count": 39
+            },
+            {
+              "value": "Musicscins",
+              "count": 39
+            },
+            {
+              "value": "Just Mobile",
+              "count": 36
+            },
+            {
+              "value": "Aviiq",
+              "count": 35
+            },
+            {
+              "value": "Loud-universe",
+              "count": 35
+            },
+            {
+              "value": "Coverking",
+              "count": 34
+            },
+            {
+              "value": "Maclove",
+              "count": 34
+            },
+            {
+              "value": "Rock",
+              "count": 34
+            },
+            {
+              "value": "Hoco",
+              "count": 32
+            },
+            {
+              "value": "Slickwraps",
+              "count": 32
+            },
+            {
+              "value": "Happymori",
+              "count": 31
+            },
+            {
+              "value": "Jisoncase",
+              "count": 31
+            },
+            {
+              "value": "Kalaideng",
+              "count": 31
+            },
+            {
+              "value": "Love Mei",
+              "count": 30
+            },
+            {
+              "value": "Alef Design",
+              "count": 29
+            },
+            {
+              "value": "Gsmprice",
+              "count": 29
+            },
+            {
+              "value": "Spigen",
+              "count": 29
+            },
+            {
+              "value": "Skt",
+              "count": 28
+            },
+            {
+              "value": "Buff",
+              "count": 27
+            },
+            {
+              "value": "Mili",
+              "count": 26
+            },
+            {
+              "value": "Heaven",
+              "count": 25
+            },
+            {
+              "value": "Oxo",
+              "count": 25
+            },
+            {
+              "value": "Guess",
+              "count": 24
+            },
+            {
+              "value": "Other_value",
+              "count": 24
+            },
+            {
+              "value": "Kensington",
+              "count": 23
+            },
+            {
+              "value": "Maxtouuch",
+              "count": 23
+            },
+            {
+              "value": "Generic",
+              "count": 21
+            },
+            {
+              "value": "Idea",
+              "count": 21
+            },
+            {
+              "value": "Gear4",
+              "count": 20
+            },
+            {
+              "value": "Ipega",
+              "count": 20
+            },
+            {
+              "value": "Rearth-ringke",
+              "count": 20
+            },
+            {
+              "value": "Cl",
+              "count": 19
+            },
+            {
+              "value": "Focus",
+              "count": 19
+            },
+            {
+              "value": "Skytone",
+              "count": 19
+            },
+            {
+              "value": "Doss",
+              "count": 18
+            },
+            {
+              "value": "Geex",
+              "count": 18
+            },
+            {
+              "value": "Musubo",
+              "count": 18
+            },
+            {
+              "value": "Beyzacases",
+              "count": 17
+            },
+            {
+              "value": "Genexx",
+              "count": 17
+            },
+            {
+              "value": "Jean-paul Gaultier",
+              "count": 17
+            },
+            {
+              "value": "Remax",
+              "count": 17
+            },
+            {
+              "value": "Aone",
+              "count": 16
+            },
+            {
+              "value": "Armor-x",
+              "count": 16
+            },
+            {
+              "value": "Blade",
+              "count": 16
+            },
+            {
+              "value": "Mercury",
+              "count": 16
+            },
+            {
+              "value": "Any Shock",
+              "count": 15
+            },
+            {
+              "value": "Awei",
+              "count": 15
+            },
+            {
+              "value": "Bling",
+              "count": 15
+            },
+            {
+              "value": "Joyrome",
+              "count": 15
+            },
+            {
+              "value": "Moshi",
+              "count": 15
+            },
+            {
+              "value": "Tucano",
+              "count": 15
+            },
+            {
+              "value": "Unplug",
+              "count": 15
+            },
+            {
+              "value": "Ahha",
+              "count": 14
+            },
+            {
+              "value": "Kajsa",
+              "count": 14
+            },
+            {
+              "value": "Labc",
+              "count": 14
+            },
+            {
+              "value": "Laut",
+              "count": 14
+            },
+            {
+              "value": "Lifeproof",
+              "count": 14
+            },
+            {
+              "value": "Arachnophobia",
+              "count": 13
+            },
+            {
+              "value": "Bigben",
+              "count": 13
+            },
+            {
+              "value": "Hello Deere",
+              "count": 13
+            },
+            {
+              "value": "Juicy Couture",
+              "count": 13
+            },
+            {
+              "value": "Totu",
+              "count": 13
+            },
+            {
+              "value": "Andygo",
+              "count": 12
+            },
+            {
+              "value": "Istore",
+              "count": 12
+            },
+            {
+              "value": "Jabra",
+              "count": 12
+            },
+            {
+              "value": "Melkco",
+              "count": 12
+            },
+            {
+              "value": "Moschino",
+              "count": 12
+            },
+            {
+              "value": "Worldbuy",
+              "count": 12
+            },
+            {
+              "value": "Ebamboo",
+              "count": 11
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
