@@ -65,7 +65,15 @@ ProductsController.prototype.search = function (q) {
     });*/
     this.loading = true;
     this.items.search({q: q}, function (data) {
-            this.display(data.data.products);
+        if (data.data && data.data.products) {
+            if (!data.data.products.length) {
+                this.emptyResults = true;
+                this.display([]);
+            } else {
+                this.emptyResults = false;
+                this.display(data.data.products);
+            }
+        }
             //this.$ionicLoading.hide();
             this.loading = false;
         }.bind(this));

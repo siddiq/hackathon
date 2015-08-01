@@ -5,6 +5,7 @@
         <input type="text" placeholder="Searching for:" ng-model="vm.keyword" ng-model-options="{ debounce: 1000 }">
     </label>
     <button class="button button-full button-light" ng-show="vm.loading">Loading from Souq.ae...</button>
+    <button class="button button-full button-light" ng-show="vm.emptyResults">Nothing to show</button>
     <div class="list" >
 
         <a class="item item-thumbnail-left" ng-repeat="item in items">
