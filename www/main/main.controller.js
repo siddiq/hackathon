@@ -76,7 +76,6 @@ angular.extend(MainController.prototype, {
                     // Use api to recognize image.
                     that.cloudSightClient({url: url, success: function (data) {
                         console.log(data);
-                        navigator.notification.alert('sedfsewfswe');
                         document.getElementById('results').innerHTML = data.name;
                         that.$location.path('products');
                         that.$scope.$root.keyword = data.name;
