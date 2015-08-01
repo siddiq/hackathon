@@ -3,7 +3,7 @@ function ProductsController ($scope, $resource) {
     $scope.vm = this;
     this.$resource = $resource;
 
-    this.items = $resource('/dummy/iphone.json', {
+    this.items = $resource('https://api.souq.com/v1/products', {
 
     }, {
         search: {

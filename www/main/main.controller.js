@@ -1,6 +1,6 @@
 /*global ionic, angular, Camera, ProductsController */
 
-function MainController ($scope) {
+function MainController ($scope, $http) {
     this.$scope = $scope;
     $scope.vm = this;
 
@@ -50,7 +50,5 @@ angular.extend(MainController.prototype, {
     }
 });
 
-ProductsController.$inject = ['$scope'];
-
-angular.module('main', [])
-    .controller('controllers.main', MainController);
+angular.module('main', ['ngResource'])
+    .controller('controllers.main', ['$scope', '$http', MainController]);
