@@ -1,8 +1,15 @@
-/*global ionic, angular, Camera, ProductsController */
+/*global ionic, angular, Camera, ProductsController, FileUploadOptions, FileTransfer */
 
-function MainController ($scope, $http) {
+var debug = true;
+
+function MainController ($scope, $http, $timeout) {
     this.$scope = $scope;
     $scope.vm = this;
+
+    this.$http = $http;
+    this.$timeout = $timeout;
+
+    this.result = {"name":"asdkasdkahsdkahsjdkas"};
 
     function onDeviceReady() {
         $scope.vm.initcamera();
@@ -18,17 +25,69 @@ function MainController ($scope, $http) {
 }
 
 angular.extend(MainController.prototype, {
+
+    /**
+     * Run the camera and take a picture.
+     * Then call the cloud sight API.
+     */
     initcamera: function () {
+        var that = this;
+
+        /**
+         * Upload to a temp server.
+         */
+        function uploadPhoto(imageURI, win, fail) {
+            var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+
+            var params = new Object();
+            params.value1 = "test";
+            params.value2 = "param";
+
+            options.params = params;
+            options.chunkedMode = false;
+
+            var ft = new FileTransfer();
+            ft.upload(imageURI, "http://siddiq.email/hackathon/upload.php", win, fail, options);
+        }
+
         if (navigator.camera) {
 
             navigator.camera.getPicture(function (imageURI) {
-                document.getElementById('myimage').src = 'data:image/jpg;base64,' + imageURI;
+                var src;
+                if (/^file:/.test(imageURI)) {
+                    src = imageURI;
+                } else {
+                    src = 'data:image/jpg;base64,' + imageURI;
+                }
+
+                // Display the picture.
+                document.getElementById('myimage').src = src;
+
+                // Upload the picture.
+                uploadPhoto(src, function (r) {
+                    // success
+                    console.log('Image uploaded at temp server');
+                    var url = JSON.parse(r.response).url;
+
+                    // Use api to recognize image.
+                    that.cloudSightClient({url: url, success: function (data) {
+                        console.log(data);
+                    }, error: function (err) {
+                        //
+                    }});
+                }, function (error) {
+                    // fail
+                    navigator.notification.alert("An error has occurred: Code = " + error.code, 'Error');
+                });
             }, function (err) {
                 // Ruh-roh, something bad happened
                 navigator.notification.alert(err, 'Error');
             }, {
                 quality: 75,
-                destinationType: Camera.DestinationType.DATA_URL,
+                //destinationType: Camera.DestinationType.DATA_URL,
                 sourceType: Camera.PictureSourceType.CAMERA,
 
                 //allowEdit: true,     // its not working in iphone anyway
@@ -45,10 +104,92 @@ angular.extend(MainController.prototype, {
             this.$scope;
         } else {
             // desktop
-            alert('camera started');
+            var url = "http://siddiq.email/hackathon/uploaded-images/2015-08-01-11-48-19-065414.jpg";
+            document.getElementById('myimage').src = url;
+            that.cloudSightClient({url: url, success: function (data) {
+                console.log('now i am back in caller', data);
+                //that.result = {"name":"asdkasdkahsdkahsjdkas"};
+                document.getElementById('results').innerHTML = data.name;
+            }});
+
+          this.result = {"name":"asdkasdkahsdkahsjdkas"};
+
+        }
+    },
+
+    /**
+     * Cloud Sight Client
+     * @param {Object} cfg
+     * @param {String} cfg.url
+     * @param {Function} cfg.success
+     * @param {Function} cfg.error
+     * @param {Object} cfg.scope (optional)
+     */
+    cloudSightClient: function name(cfg) {
+        /*
+            // Typical API session from curl
+
+            // image_requests
+            // curl -i -X POST -H "Authorization: CloudSight bZBDqGjCmsIg1Q7TUDDToA" -F "image_request[image]=@smalljoke.jpg" -F "image_request[locale]=en-US" https://api.cloudsightapi.com/image_requests
+            // {"token":"xrCr_w4k_1-zhm9ZQ0PlYg","url":"//d1spq65clhrg1f.cloudfront.net/uploads/image_request/image/28/28021/28021996/smalljoke.jpg"}
+
+            // image_responses
+            // curl -i -H "Authorization: CloudSight bZBDqGjCmsIg1Q7TUDDToA" https://api.cloudsightapi.com/image_responses/xrCr_w4k_1-zhm9ZQ0PlYg
+            // {"status":"completed","name":"blue bird illustration"}
+        */
+        cfg.scope = cfg.scope || this;
+        cfg.success = cfg.success || function() {};
+        cfg.error = cfg.error || function() {};
+
+        var BASE_URL = 'https://api.cloudsightapi.com',
+            apikey = 'bZBDqGjCmsIg1Q7TUDDToA',
+            that = this;
+
+        this.$http({
+            method: debug ? 'GET': 'POST',
+            url: debug ? '/dummy/cloudsight-rec1.json' : BASE_URL + '/image_requests',
+            headers: {
+                "Authorization": "CloudSight " + apikey,
+            },
+            data: JSON.stringify({
+                "remote_image_url": cfg.url,
+                "locale": "en-US"
+            })
+        }).success(function (data, status, headers, config) {
+            console.log('cloudsight:image_requests:success');
+            var token = data.token;
+            console.log("token=" + token);
+            pollResponse(token);
+        }).error(function(data, status, headers, config) {
+            console.log('cloudsight:image_requests:error....' + JSON.stringify(arguments));
+        });
+
+        function pollResponse(token) {
+            that.$timeout(function () {
+                that.$http({
+                    method: 'GET',
+                    url: debug ? '/dummy/cloudsight-rec2.json' : BASE_URL + '/image_responses/' + token,
+                    headers: {
+                        "Authorization": "CloudSight " + apikey
+                    }
+                }).success(function (data, status, headers, config) {
+                    console.log('cloudsight:image_responses:success');
+                    if (data.status === "completed") {
+                        //console.log(JSON.stringify(data, null, 3));
+                        cfg.success && cfg.success.call(cfg.scope, data);
+                    } else {
+                        // try again
+                        pollResponse(token);
+                    }
+                }).error(function(data, status, headers, config) {
+                    console.log('cloudsight:image_responses:error');
+                });
+            }, 1000);
         }
     }
 });
 
+ProductsController.$inject = ['$scope'];
+
 angular.module('main', ['ngResource'])
-    .controller('controllers.main', ['$scope', '$http', MainController]);
+    .controller('controllers.main', ['$scope', '$http', '$timeout', MainController]);
