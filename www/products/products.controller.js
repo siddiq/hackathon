@@ -1,37 +1,38 @@
-function ProductsController ($scope) {
+function ProductsController ($scope, $resource) {
     this.$scope = $scope;
     $scope.vm = this;
-    this.fetch();
+    this.$resource = $resource;
+
+    this.items = $resource('/dummy/iphone.json', {
+
+    }, {
+        search: {
+            method: 'GET',
+            params: {
+                page:1,
+                show:10,
+                show_attributes:0,
+                country:'ae',
+                language:'en',
+                format:'json',
+                'app_id':7875262,
+                'app_secret': 'YxpMgQJiVLQGNUclUX5M'
+            }
+        }
+    });
+
+    this.search('rfe');
 }
 
-angular.extend(ProductsController.prototype, {
-    fetch: function (items) {
-        this.$scope.items = items || [
-                {
-                    image: 'http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_M_7274966_5621616.jpg',
-                    caption: 'iphone',
-                    desc: 'rgrg erg egeg'
-                },
-                {
-                    image: 'http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_M_7274966_5621616.jpg',
-                    caption: 'iphone',
-                    desc: 'rgrg erg egeg'
-                },
-                {
-                    image: 'http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_M_7274966_5621616.jpg',
-                    caption: 'iphone',
-                    desc: 'rgrg erg egeg'
-                },
-                {
-                    image: 'http://cf5.souqcdn.com/item/2014/09/14/72/74/96/6/item_M_7274966_5621616.jpg',
-                    caption: 'iphone',
-                    desc: 'rgrg erg egeg'
-                }
-            ];
-    }
-});
+ProductsController.prototype.display = function (items) {
+        this.$scope.items = items;
+    };
 
-ProductsController.$inject = ['$scope'];
+ProductsController.prototype.search = function (q) {
+        this.items.search({q: q}, function (data) {
+            this.display(data.data.products);
+        }.bind(this));
+    };
 
-angular.module('products', [])
-    .controller('controllers.products', ProductsController);
+angular.module('products', ['ngResource'])
+    .controller('controllers.products', ['$scope', '$resource', ProductsController]);
