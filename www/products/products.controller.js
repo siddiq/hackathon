@@ -1,9 +1,10 @@
-function ProductsController ($scope, $resource, $rootScope, $timeout) {
+function ProductsController ($scope, $resource, $rootScope, $ionicLoading) {
     this.$scope = $scope;
     $scope.vm = this;
     this.$resource = $resource;
     this.$rootScope = $rootScope;
     this.keyword = $rootScope.keyword;
+    this.$ionicLoading = $ionicLoading;
 
     var local = 'http://localhost:5000/api/products';
     var remoteSouq = 'https://api.souq.com/v1/products';
@@ -59,10 +60,14 @@ ProductsController.prototype.display = function (items) {
     };
 
 ProductsController.prototype.search = function (q) {
-        this.items.search({q: q}, function (data) {
+    this.$ionicLoading.show({
+        template: 'Loading from Souq.ae'
+    });
+    this.items.search({q: q}, function (data) {
             this.display(data.data.products);
+            this.$ionicLoading.hide();
         }.bind(this));
     };
 
 angular.module('products', ['ngResource'])
-    .controller('controllers.products', ['$scope', '$resource', '$rootScope', '$timeout', ProductsController]);
+    .controller('controllers.products', ['$scope', '$resource', '$rootScope', '$ionicLoading', ProductsController]);

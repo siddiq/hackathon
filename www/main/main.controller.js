@@ -76,7 +76,11 @@ angular.extend(MainController.prototype, {
                     // Use api to recognize image.
                     that.cloudSightClient({url: url, success: function (data) {
                         console.log(data);
+                        navigator.notification.alert('sedfsewfswe');
                         document.getElementById('results').innerHTML = data.name;
+                        that.$location.path('products');
+                        that.$scope.$root.keyword = data.name;
+                        that.$scope.$root.$emit('keyword1', data.name);
                     }, error: function (err) {
                         //
                     }});
@@ -111,7 +115,7 @@ angular.extend(MainController.prototype, {
                 console.log('now i am back in caller', data);
                 //that.result = {"name":"asdkasdkahsdkahsjdkas"};
                 document.getElementById('results').innerHTML = data.name;
-                that.$location.path('/products');
+                that.$location.path('products');
                 that.$scope.$root.keyword = data.name;
                 that.$scope.$root.$emit('keyword1', data.name);
             }});
