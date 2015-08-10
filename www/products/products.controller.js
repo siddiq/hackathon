@@ -3,7 +3,7 @@ function ProductsController ($scope, $resource, $rootScope, $ionicLoading) {
     $scope.vm = this;
     this.$resource = $resource;
     this.$rootScope = $rootScope;
-    this.keyword = $rootScope.keyword;
+    this.keyword = this.filterWords($rootScope.keyword);
     this.$ionicLoading = $ionicLoading;
 
     var local = 'http://localhost:5000/api/products';
@@ -44,16 +44,23 @@ function ProductsController ($scope, $resource, $rootScope, $ionicLoading) {
         return this.keyword
     }.bind(this), function (newVal, oldVal) {
             if (newVal === oldVal || newVal === $rootScope.keyword) return;
-            $rootScope.keyword = newVal;
+            $rootScope.keyword = this.filterWords(newVal);
             this.search(newVal);
         }.bind(this)
     );
 
     $rootScope.$on('keyword1', function (e, word) {
+        word = this.filterWords(word);
         $rootScope.keyword = word;
         this.search(word);
     }.bind(this));
 }
+
+ProductsController.prototype.filterWords = function (q) {
+    var filterWords = ["red", "black", "white", 'and', 'grey', 'yellow', 'brown', 'bright', 'dark', 'leaf', 'violet', 'clene', 'clean', 'big', 'small', 'gray', 'rolling', 'silver', 'gold'];
+    var rgx = new RegExp(filterWords.join("|"), "gi");
+    return q.replace(rgx, "").trim().replace(/\s+/g, ' ');
+};
 
 ProductsController.prototype.display = function (items) {
         this.$scope.items = items;
